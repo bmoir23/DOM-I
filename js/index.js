@@ -104,13 +104,14 @@ contacttext[2].textContent = siteContent["contact"]["email"]
 let footercontent = document.querySelector("footer p");
 footercontent.textContent = siteContent["footer"]["copyright"]
 
-// create & prepend
+// color for nav links
 
 const green = document.querySelectorAll('nav a')
 for (let i = 0; i < green.length; i++){
   const changeColor = green[i]
   changeColor.style.color = 'green';
 }
+// create & prepend
 
 let newLink = document.createElement("a");
 newLink.textContent = "Work with us!";
