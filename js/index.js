@@ -99,3 +99,35 @@ let contacttext = document.querySelectorAll(".contact p");
 contacttext[0].textContent = siteContent["contact"]["address"]
 contacttext[1].textContent = siteContent["contact"]["phone"]
 contacttext[2].textContent = siteContent["contact"]["email"]
+
+// footer
+let footercontent = document.querySelector("footer p");
+footercontent.textContent = siteContent["footer"]["copyright"]
+
+// create & prepend
+
+const green = document.querySelectorAll('nav a')
+for (let i = 0; i < green.length; i++){
+  const changeColor = green[i]
+  changeColor.style.color = 'green';
+}
+
+let newLink = document.createElement("a");
+newLink.textContent = "Work with us!";
+newLink.href = "#";
+newLink.style.color = "green";
+newLink.style.paddingLeft = "25px";
+
+let nav = document.querySelector('nav') // adds "Work with us!" to end of nav 
+nav.appendChild(newLink);
+
+
+let newLink2 = document.createElement("a");
+newLink2.textContent = "Home";
+newLink2.href = "#";
+newLink2.style.color = 'green';
+newLink2.style.paddingRight = "25px";
+
+document.querySelector('nav') // adds home to beginning of nav 
+nav.prepend(newLink2)
+
