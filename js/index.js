@@ -132,3 +132,15 @@ newLink2.style.paddingRight = "25px";
 document.querySelector('nav') // adds home to beginning of nav 
 nav.prepend(newLink2)
 
+
+// stretch
+
+let newP = document.createElement("p");
+footercontent.appendChild(newP);
+
+let newBtn = document.createElement("button");
+newBtn.textContent = "Stretch Button"
+newBtn.addEventListener('click',(event) => {
+  event.bottomtext.visibility = "hidden"
+})
+newP.appendChild(newBtn);
